@@ -31,7 +31,7 @@ interface GeminiRequest {
 }
 
 // Get project ID from environment variables
-const PROJECT_ID = process.env.GOOGLE_CLOUD_PROJECT_ID || process.env.GCLOUD_PROJECT || "profile-lens";
+const PROJECT_ID = process.env.GOOGLE_CLOUD_PROJECT_ID || process.env.GCLOUD_PROJECT;
 const LOCATION_ID = "us-central1";
 const API_ENDPOINT = "us-central1-aiplatform.googleapis.com";
 const MODEL_ID = "gemini-2.0-flash-exp";
