@@ -5,7 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 interface TTSResponse {
   success: boolean;
-  url: string;
+  audioContent: string;
   fileName: string;
 }
 
@@ -33,13 +33,14 @@ const TextToSpeech: React.FC = () => {
         text,
         languageCode: 'en-GB',
         voiceName: 'en-GB-Journey-F',
-        speakingRate: 1.0
+        speakingRate: 1.0,
+        pitch: 0
       });
 
-      if (result.data.success && result.data.url) {
-        setAudioUrl(result.data.url);
+      if (result.data.success && result.data.audioContent) {
+        setAudioUrl(`data:audio/mp3;base64,${result.data.audioContent}`);
       } else {
-        throw new Error('Failed to get audio URL');
+        throw new Error('Failed to get audio content');
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
@@ -52,7 +53,7 @@ const TextToSpeech: React.FC = () => {
     if (audioUrl) {
       const link = document.createElement('a');
       link.href = audioUrl;
-      link.download = 'tts-audio.mp3';
+      link.download = 'speech.mp3';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
