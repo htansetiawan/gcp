@@ -1,0 +1,252 @@
+[debug] [2025-01-28T07:08:17.377Z] ----------------------------------------------------------------------
+[debug] [2025-01-28T07:08:17.378Z] Command:       /opt/homebrew/Cellar/node/23.3.0/bin/node /opt/homebrew/bin/firebase deploy --only functions
+[debug] [2025-01-28T07:08:17.379Z] CLI Version:   13.29.2
+[debug] [2025-01-28T07:08:17.379Z] Platform:      darwin
+[debug] [2025-01-28T07:08:17.379Z] Node Version:  v23.3.0
+[debug] [2025-01-28T07:08:17.379Z] Time:          Mon Jan 27 2025 23:08:17 GMT-0800 (Pacific Standard Time)
+[debug] [2025-01-28T07:08:17.379Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-28T07:08:17.452Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-28T07:08:17.452Z] > authorizing via signed-in user (cryptonic1841@gmail.com)
+[debug] [2025-01-28T07:08:17.453Z] [iam] checking project ignitex-lab for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-01-28T07:08:17.453Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:17.453Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:17.453Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions [none]
+[debug] [2025-01-28T07:08:17.453Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:17.453Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-01-28T07:08:17.575Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions 200
+[debug] [2025-01-28T07:08:17.576Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-01-28T07:08:17.576Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:17.576Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:17.576Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/ignitex-lab/serviceAccounts/ignitex-lab@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-01-28T07:08:17.576Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/ignitex-lab/serviceAccounts/ignitex-lab@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-01-28T07:08:17.745Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/ignitex-lab/serviceAccounts/ignitex-lab@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-01-28T07:08:17.746Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/ignitex-lab/serviceAccounts/ignitex-lab@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'ignitex-lab'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2025-01-28T07:08:22.741Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.741Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.741Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab [none]
+[debug] [2025-01-28T07:08:22.894Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab 200
+[debug] [2025-01-28T07:08:22.894Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab {"projectNumber":"300087174481","projectId":"ignitex-lab","lifecycleState":"ACTIVE","name":"ignitex-lab","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-28T00:52:02.021719Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:22.895Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.895Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.895Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.895Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:22.896Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.896Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:22.896Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.896Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:22.896Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-01-28T07:08:22.896Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:22.897Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-01-28T07:08:22.897Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:22.897Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudbuild.googleapis.com [none]
+[debug] [2025-01-28T07:08:22.897Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudbuild.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:22.898Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/artifactregistry.googleapis.com [none]
+[debug] [2025-01-28T07:08:22.898Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/artifactregistry.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:23.115Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudfunctions.googleapis.com 200
+[debug] [2025-01-28T07:08:23.116Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:23.135Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/artifactregistry.googleapis.com 200
+[debug] [2025-01-28T07:08:23.135Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:23.347Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/runtimeconfig.googleapis.com 200
+[debug] [2025-01-28T07:08:23.347Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-01-28T07:08:23.353Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudbuild.googleapis.com 200
+[debug] [2025-01-28T07:08:23.353Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:23.354Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:23.354Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:23.354Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ignitex-lab/adminSdkConfig [none]
+[debug] [2025-01-28T07:08:23.596Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ignitex-lab/adminSdkConfig 200
+[debug] [2025-01-28T07:08:23.597Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ignitex-lab/adminSdkConfig {"projectId":"ignitex-lab","storageBucket":"ignitex-lab.firebasestorage.app"}
+[debug] [2025-01-28T07:08:23.597Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:23.597Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:23.597Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ignitex-lab/configs [none]
+[debug] [2025-01-28T07:08:23.792Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ignitex-lab/configs 200
+[debug] [2025-01-28T07:08:23.792Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/ignitex-lab/configs {}
+[debug] [2025-01-28T07:08:23.795Z] Validating nodejs source
+[debug] [2025-01-28T07:08:24.218Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --ext .js,.ts . --fix",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "npm run build && firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "dev": "npm run build:watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^6.3.0",
+    "google-auth-library": "^9.4.1"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^3.0.1",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2025-01-28T07:08:24.218Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-01-28T07:08:24.219Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-01-28T07:08:24.223Z] Found firebase-functions binary at '/Users/henrytan/git/vertex-tts/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8228
+
+[debug] [2025-01-28T07:08:24.504Z] Got response from /__/functions.yaml {"endpoints":{"synthesizeSpeech":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-central1"],"secretEnvironmentVariables":[{"key":"GOOGLE_CLOUD_API_KEY"}],"labels":{},"callableTrigger":{},"entryPoint":"synthesizeSpeech"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{},"params":[{"type":"secret","name":"GOOGLE_CLOUD_API_KEY"}]}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:28.522Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:28.522Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:28.523Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-01-28T07:08:28.523Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:29.001Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/firebaseextensions.googleapis.com 200
+[debug] [2025-01-28T07:08:29.001Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/firebaseextensions.googleapis.com [omitted]
+[info] ✔  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:29.001Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-28T07:08:29.001Z] > authorizing via signed-in user (cryptonic1841@gmail.com)
+[debug] [2025-01-28T07:08:29.001Z] [iam] checking project ignitex-lab for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-01-28T07:08:29.001Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.001Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.001Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions [none]
+[debug] [2025-01-28T07:08:29.001Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:29.001Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-01-28T07:08:29.107Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions 200
+[debug] [2025-01-28T07:08:29.107Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-01-28T07:08:29.108Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.108Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.108Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/ignitex-lab/instances pageSize=100&pageToken=
+[debug] [2025-01-28T07:08:29.490Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/ignitex-lab/instances 200
+[debug] [2025-01-28T07:08:29.490Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/ignitex-lab/instances {}
+[debug] [2025-01-28T07:08:29.492Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.492Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.492Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY [none]
+[debug] [2025-01-28T07:08:29.991Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY 200
+[debug] [2025-01-28T07:08:29.992Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY {"name":"projects/300087174481/secrets/GOOGLE_CLOUD_API_KEY","replication":{"automatic":{}},"createTime":"2025-01-28T06:42:04.876712Z","labels":{"firebase-managed":"functions"},"etag":"\"162cbe7db7e7a8\""}
+[debug] [2025-01-28T07:08:29.992Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.993Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:29.993Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest [none]
+[debug] [2025-01-28T07:08:30.171Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest 200
+[debug] [2025-01-28T07:08:30.171Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest {"name":"projects/300087174481/secrets/GOOGLE_CLOUD_API_KEY/versions/3","createTime":"2025-01-28T07:02:39.186420Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"162cbec749f9f4\""}
+[info] i  functions: preparing . directory for uploading... 
+[info] i  functions: packaged /Users/henrytan/git/vertex-tts/functions (111.68 KB) for uploading 
+[debug] [2025-01-28T07:08:30.225Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:30.225Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:30.225Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/ignitex-lab/locations/-/functions [none]
+[debug] [2025-01-28T07:08:30.829Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/ignitex-lab/locations/-/functions 200
+[debug] [2025-01-28T07:08:30.829Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/ignitex-lab/locations/-/functions {}
+[debug] [2025-01-28T07:08:30.830Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:30.830Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:30.830Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-01-28T07:08:31.256Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/-/functions 200
+[debug] [2025-01-28T07:08:31.256Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/-/functions {"functions":[{"name":"projects/ignitex-lab/locations/us-central1/functions/synthesizeSpeechFn","buildConfig":{"build":"projects/300087174481/locations/us-central1/builds/406d4887-26ba-43e2-9783-6c010dd0082d","runtime":"nodejs18","entryPoint":"synthesizeSpeechFn","source":{"storageSource":{"bucket":"gcf-v2-sources-300087174481-us-central1","object":"synthesizeSpeechFn/function-source.zip","generation":"1738047764828051"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/ignitex-lab/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-300087174481-us-central1","object":"synthesizeSpeechFn/function-source.zip","generation":"1738047764828051"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/ignitex-lab/serviceAccounts/300087174481-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/ignitex-lab/locations/us-central1/services/synthesizespeechfn","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"ignitex-lab\",\"storageBucket\":\"ignitex-lab.firebasestorage.app\"}","GCLOUD_PROJECT":"ignitex-lab","EVENTARC_CLOUD_EVENT_SOURCE":"projects/ignitex-lab/locations/us-central1/services/synthesizeSpeechFn","FUNCTION_TARGET":"synthesizeSpeechFn","LOG_EXECUTION_ID":"true"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://synthesizespeechfn-p5xm4z7sha-uc.a.run.app","serviceAccountEmail":"300087174481-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"secretEnvironmentVariables":[{"key":"GOOGLE_CLOUD_API_KEY","projectId":"ignitex-lab","secret":"GOOGLE_CLOUD_API_KEY","version":"3"}],"revision":"synthesizespeechfn-00003-koy","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-01-28T07:03:50.176435962Z","labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"a94e617dfcca767b7179b34dc9a6d214aa815bec"},"environment":"GEN_2","url":"https://us-central1-ignitex-lab.cloudfunctions.net/synthesizeSpeechFn","createTime":"2025-01-28T06:52:23.499257780Z"}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:31.260Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.261Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.262Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/run.googleapis.com [none]
+[debug] [2025-01-28T07:08:31.262Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/run.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:31.264Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/eventarc.googleapis.com [none]
+[debug] [2025-01-28T07:08:31.264Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/eventarc.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:31.265Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/pubsub.googleapis.com [none]
+[debug] [2025-01-28T07:08:31.265Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/pubsub.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:31.267Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/storage.googleapis.com [none]
+[debug] [2025-01-28T07:08:31.267Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/storage.googleapis.com x-goog-quota-user=projects/ignitex-lab
+[debug] [2025-01-28T07:08:31.469Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/eventarc.googleapis.com 200
+[debug] [2025-01-28T07:08:31.469Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:31.699Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/run.googleapis.com 200
+[debug] [2025-01-28T07:08:31.700Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:31.702Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/storage.googleapis.com 200
+[debug] [2025-01-28T07:08:31.702Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-01-28T07:08:31.731Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/pubsub.googleapis.com 200
+[debug] [2025-01-28T07:08:31.731Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ignitex-lab/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-01-28T07:08:31.731Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.731Z] Checked if tokens are valid: true, expires at: 1738051086856
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-01-28T07:08:31.732Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.732Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:31.732Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-01-28T07:08:31.732Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-01-28T07:08:32.221Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-01-28T07:08:32.221Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-300087174481@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"111609247705252698311"}}
+[debug] [2025-01-28T07:08:32.221Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-01-28T07:08:32.222Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/300087174481/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-300087174481@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"113744676847357375571"}}
+[debug] [2025-01-28T07:08:32.223Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.223Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.223Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest [none]
+[debug] [2025-01-28T07:08:32.319Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest 200
+[debug] [2025-01-28T07:08:32.320Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/ignitex-lab/secrets/GOOGLE_CLOUD_API_KEY/versions/latest {"name":"projects/300087174481/secrets/GOOGLE_CLOUD_API_KEY/versions/3","createTime":"2025-01-28T07:02:39.186420Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"162cbec749f9f4\""}
+[debug] [2025-01-28T07:08:32.320Z] Resolved secret version of GOOGLE_CLOUD_API_KEY to 3.
+[debug] [2025-01-28T07:08:32.321Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.321Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.321Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab [none]
+[debug] [2025-01-28T07:08:32.441Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab 200
+[debug] [2025-01-28T07:08:32.441Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/ignitex-lab {"projectNumber":"300087174481","projectId":"ignitex-lab","lifecycleState":"ACTIVE","name":"ignitex-lab","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-01-28T00:52:02.021719Z"}
+[debug] [2025-01-28T07:08:32.441Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.441Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.441Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/ignitex-lab/billingInfo [none]
+[debug] [2025-01-28T07:08:32.726Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/ignitex-lab/billingInfo 200
+[debug] [2025-01-28T07:08:32.726Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/ignitex-lab/billingInfo {"name":"projects/ignitex-lab/billingInfo","projectId":"ignitex-lab","billingAccountName":"billingAccounts/01E13D-16A3B2-F9E136","billingEnabled":true}
+[debug] [2025-01-28T07:08:32.729Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.729Z] Checked if tokens are valid: true, expires at: 1738051086856
+[debug] [2025-01-28T07:08:32.729Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-01-28T07:08:33.079Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-01-28T07:08:33.079Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/ignitex-lab/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com/2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip?GoogleAccessId=service-300087174481@gcf-admin-robot.iam.gserviceaccount.com&Expires=1738049913&Signature=gA0OYQzwQHUTSX3luuKv8b2XCpc27AbuIMdNf0BzVdJwB%2BB302FMpuO0efRJ1PwBY20Ov5J2LNMHvC14WgWkk5UE9v2xbsiTSt5%2BZl67cqXj7JfKYqrxAouoIGMHCyrBfsSuJHNRm1k5RQ%2FMDKQx41yO7HK%2FC4U%2FwCtJ8KGxzdNnyKU%2BCHv%2BHqjGHUY3lZbJj00qrNjWkj1cKlfDQvOCqwjuoyL0mh%2BExnkdwkghwbnBBB4xXsEOOfuhzQCV5TY2ceA5CPodIDYd8dzVpPHUskr3ryKdhUcC3%2FXWUruZiVelQL5lWVNQ%2FbKFPF8TJYtM2csQjXF3oVp9aLbm2F1y4Q%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com","object":"2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip"}}
+[debug] [2025-01-28T07:08:33.080Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com/2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip GoogleAccessId=service-300087174481%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1738049913&Signature=gA0OYQzwQHUTSX3luuKv8b2XCpc27AbuIMdNf0BzVdJwB%2BB302FMpuO0efRJ1PwBY20Ov5J2LNMHvC14WgWkk5UE9v2xbsiTSt5%2BZl67cqXj7JfKYqrxAouoIGMHCyrBfsSuJHNRm1k5RQ%2FMDKQx41yO7HK%2FC4U%2FwCtJ8KGxzdNnyKU%2BCHv%2BHqjGHUY3lZbJj00qrNjWkj1cKlfDQvOCqwjuoyL0mh%2BExnkdwkghwbnBBB4xXsEOOfuhzQCV5TY2ceA5CPodIDYd8dzVpPHUskr3ryKdhUcC3%2FXWUruZiVelQL5lWVNQ%2FbKFPF8TJYtM2csQjXF3oVp9aLbm2F1y4Q%3D%3D
+[debug] [2025-01-28T07:08:33.080Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com/2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip [stream]
+[debug] [2025-01-28T07:08:33.422Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com/2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip 200
+[debug] [2025-01-28T07:08:33.422Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-300087174481.us-central1.cloudfunctions.appspot.com/2ac0b06c-9edf-4112-9d5d-40e3ac5f75f4.zip [omitted]
+[info] ✔  functions: . folder uploaded successfully 
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	synthesizeSpeechFn(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
